@@ -1,30 +1,17 @@
 import SwiftUI
 
-struct ContentView: View {
-    @State private var selectedTab = 0
+class AppState: ObservableObject {
+    @Published var isLoggedIn = false
+}
 
+struct ContentView: View {
+    @StateObject private var appState = AppState()
+    
     var body: some View {
-        TabView(selection: $selectedTab) {
-            PostListView()
-                .tabItem {
-                    Image(systemName: "house.fill")
-                    Text("Home")
-                }
-                .tag(0)
-            
-            SettingsView()
-                .tabItem {
-                    Image(systemName: "magnifyingglass")
-                    Text("Search")
-                }
-                .tag(1)
-            
-            UserView()
-                .tabItem {
-                    Image(systemName: "person.fill")
-                    Text("Profile")
-                }
-                .tag(2)
+        if appState.isLoggedIn {
+            MainPageView()
+        } else {
+            LoginView(appState: appState)
         }
     }
 }

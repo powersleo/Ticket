@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B34A55222A57755F0081E2CC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34A55212A57755F0081E2CC /* LoginView.swift */; };
+		B34A55242A5775A30081E2CC /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34A55232A5775A30081E2CC /* MainPageView.swift */; };
 		B3FCDFF32A4FD5C800716A3B /* TicketApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FCDFF22A4FD5C800716A3B /* TicketApp.swift */; };
 		B3FCDFF72A4FD5CA00716A3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3FCDFF62A4FD5CA00716A3B /* Assets.xcassets */; };
 		B3FCDFFA2A4FD5CA00716A3B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3FCDFF92A4FD5CA00716A3B /* Preview Assets.xcassets */; };
@@ -18,9 +20,13 @@
 		B3FCE0102A55234800716A3B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FCE00F2A55234800716A3B /* SettingsView.swift */; };
 		B3FCE0122A5523A100716A3B /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FCE0112A5523A100716A3B /* UserView.swift */; };
 		B3FCE0142A553D6D00716A3B /* RepliesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FCE0132A553D6D00716A3B /* RepliesView.swift */; };
+		B3FCE0182A56328100716A3B /* NewReplyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FCE0172A56328000716A3B /* NewReplyView.swift */; };
+		B3FCE01A2A56556900716A3B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FCE0192A56556900716A3B /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B34A55212A57755F0081E2CC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B34A55232A5775A30081E2CC /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
 		B3FCDFEF2A4FD5C800716A3B /* Ticket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ticket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3FCDFF22A4FD5C800716A3B /* TicketApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketApp.swift; sourceTree = "<group>"; };
 		B3FCDFF62A4FD5CA00716A3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -33,6 +39,8 @@
 		B3FCE00F2A55234800716A3B /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B3FCE0112A5523A100716A3B /* UserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		B3FCE0132A553D6D00716A3B /* RepliesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepliesView.swift; sourceTree = "<group>"; };
+		B3FCE0172A56328000716A3B /* NewReplyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReplyView.swift; sourceTree = "<group>"; };
+		B3FCE0192A56556900716A3B /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,12 +75,16 @@
 			children = (
 				B3FCDFF22A4FD5C800716A3B /* TicketApp.swift */,
 				B3FCE0072A4FD6B000716A3B /* PostView.swift */,
+				B3FCE0192A56556900716A3B /* Post.swift */,
+				B3FCE0172A56328000716A3B /* NewReplyView.swift */,
+				B34A55212A57755F0081E2CC /* LoginView.swift */,
 				B3FCE0112A5523A100716A3B /* UserView.swift */,
 				B3FCE00F2A55234800716A3B /* SettingsView.swift */,
 				B3FCE0132A553D6D00716A3B /* RepliesView.swift */,
 				B3FCE0092A4FD6DB00716A3B /* PostListView.swift */,
 				B3FCDFF62A4FD5CA00716A3B /* Assets.xcassets */,
 				B3FCE00B2A4FD97000716A3B /* ContentView.swift */,
+				B34A55232A5775A30081E2CC /* MainPageView.swift */,
 				B3FCDFFB2A4FD5CA00716A3B /* Persistence.swift */,
 				B3FCDFFD2A4FD5CA00716A3B /* Ticket.xcdatamodeld */,
 				B3FCDFF82A4FD5CA00716A3B /* Preview Content */,
@@ -159,14 +171,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3FCDFFC2A4FD5CA00716A3B /* Persistence.swift in Sources */,
+				B3FCE01A2A56556900716A3B /* Post.swift in Sources */,
 				B3FCE0102A55234800716A3B /* SettingsView.swift in Sources */,
 				B3FCDFF32A4FD5C800716A3B /* TicketApp.swift in Sources */,
 				B3FCE0142A553D6D00716A3B /* RepliesView.swift in Sources */,
 				B3FCE00C2A4FD97000716A3B /* ContentView.swift in Sources */,
+				B34A55222A57755F0081E2CC /* LoginView.swift in Sources */,
 				B3FCE0082A4FD6B000716A3B /* PostView.swift in Sources */,
 				B3FCE00A2A4FD6DB00716A3B /* PostListView.swift in Sources */,
 				B3FCDFFF2A4FD5CA00716A3B /* Ticket.xcdatamodeld in Sources */,
+				B3FCE0182A56328100716A3B /* NewReplyView.swift in Sources */,
 				B3FCE0122A5523A100716A3B /* UserView.swift in Sources */,
+				B34A55242A5775A30081E2CC /* MainPageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +311,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Ticket/Preview Content\"";
+				DEVELOPMENT_TEAM = 33THZ5QQGX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -323,6 +340,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Ticket/Preview Content\"";
+				DEVELOPMENT_TEAM = 33THZ5QQGX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

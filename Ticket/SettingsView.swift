@@ -1,60 +1,43 @@
-//
-//  SettingsView.swift
-//  City
-//
-//  Created by Leo Powers on 5/8/23.
-//  Modified and Edited by Maliah Chin 5/12/23
-//
-
 import SwiftUI
 
 struct SettingsView: View {
-    @AppStorage("isNotificationsEnabled")
-    private var isNotificationEnabled = true
-    
-    @AppStorage("isSleepTrackingEnabled")
-    private var isSleepTrackingEnabled = true
-    
-    @AppStorage("sleepTrackingMode")
-    private var sleepTrackingMode = 0
-    
-    @AppStorage("sleepGoal")
-    private var sleepGoal = 8
+    @State private var notificationsEnabled = true
+    @State private var backgroundRefresh = true
+    @State private var selectedRingtone = "Chimes"
+    @State private var volumeLevel = 0.5
 
     var body: some View {
-        Form {
-                        
-            Section(header: Text("Notifications settings")) {
-                Toggle(isOn: $isNotificationEnabled) {
-                    Text("Notification:")}}
+        NavigationView {
+            Form {
+                Section(header: Text("Notifications")) {
+                    Toggle(isOn: $notificationsEnabled) {
+                        Text("Enabled")
+                    }
 
-            Section(header: Text("Sleep tracking settings")) {
-                Toggle(isOn: $isSleepTrackingEnabled) {
-                    Text("Sleep tracking:")}
+                    Toggle(isOn: $backgroundRefresh) {
+                        Text("Background Refresh")
+                    }
+                }
 
-            Picker(
-                selection: $sleepTrackingMode,
-                label: Text("Sleep tracking mode"))
-                {Text("Dark Mode").tag("yes")}
+                Section(header: Text("Sounds")) {
+                    Picker("Ringtone", selection: $selectedRingtone) {
+                        Text("Chimes").tag("Chimes")
+                        Text("Signal").tag("Signal")
+                        Text("Waves").tag("Waves")
+                    }
 
-                Stepper(value: $sleepGoal, in: 6...12) {
-                Text("Sleep goal is \(sleepGoal) hours")}}
-                        
-            Section(header: Text("My account")) {
-                Button("Change Password") {}
-                Button("Restore purchases") {}
-                Button("View purchases") {}}
-            
-            Button("Report a Problem") {}
+                    Slider(value: $volumeLevel) {
+                        Text("Volume")
+                    }
+                }
+            }
+            .navigationTitle("Settings")
         }
-        .navigationBarTitle(Text("Settings"))
     }
 }
-
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()
     }
 }
-
